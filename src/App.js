@@ -11,6 +11,7 @@ import LandingPage from './views/landingPage';
 import Notfound from './views/notfound';
 import Signup from './views/Signup';
 import Signin from './views/signin';
+import DescriptionView from './views/description';
 
 const store = confirgureStore();
 
@@ -21,6 +22,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Signin} />
             <Route exact path="/index" component={LandingPage} />
+            <Route exact path="/description/:id" component={DescriptionView} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/login" component={Signin} />
             <Route component={Notfound} />

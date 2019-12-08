@@ -1,114 +1,111 @@
 import React from 'react';
 import car from "../img/cars/lamborghini.png";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 const LandingPage = () =>{
     return(
         <React.Fragment>
             <Header />
-            <section className="section-cars">
-                <h2>New/used cars</h2>
-                <hr/>
-                <div className="wrapper">
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                            <div className="cardCustom_side">
-                                <img src={ car } className="responsive" alt=""/>
-                                <div className="car_details">
-                                <span className="car_details-make">lamborghini <span className="car_details-price">$30000</span></span>
-                                <span className="car_details-model">Gerardo</span>
-                            </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                        <div className="cardCustom_side">
-                        <img src={car} className="responsive" alt=""/>
-                        <div className="car_details">
-                            <span className="car_details-make">lamborghini <span className="car_details-price">$30000</span></span>
-                            <span className="car_details-model">Gerardo</span>
-                        </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                            <div className="cardCustom_side">
-                            <img src={car} className="responsive" alt=""/>
-                            <div className="car_details">
-                                <span className="car_details-make">lamborghini <span className="car_details-price">$30000</span></span>
-                                <span className="car_details-model">Gerardo</span>
-                            </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                            <div className="cardCustom_side">
-                            <img src={car} className="responsive" alt=""/>
-                            <div className="car_details">
-                                <span className="car_details-make">lamborghini</span>
-                                <span className="car_details-price">$30000</span>
-                                <span className="car_details-model">Gerardo</span>
-                            </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <section class="section-cars">
+  <h2>New/used cars</h2>
+  <hr/>
+  <div class="wrapper">
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="responsive" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="responsive" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="responsive" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="responsive" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-                <div className="wrapper">
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                            <div className="cardCustom_side">
-                                <img src={ car } className="responsive" alt=""/>
-                                <div className="car_details">
-                                <span className="car_details-make">lamborghini <span className="car_details-price">$30000</span></span>
-                                <span className="car_details-model">Gerardo</span>
-                            </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                        <div className="cardCustom_side">
-                        <img src={car} className="responsive" alt=""/>
-                        <div className="car_details">
-                            <span className="car_details-make">lamborghini <span className="car_details-price">$30000</span></span>
-                            <span className="car_details-model">Gerardo</span>
-                        </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                            <div className="cardCustom_side">
-                            <img src={car} className="responsive" alt=""/>
-                            <div className="car_details">
-                                <span className="car_details-make">lamborghini <span className="car_details-price">$30000</span></span>
-                                <span className="car_details-model">Gerardo</span>
-                            </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="three columns">
-                        <a href="description.html" className="cardCustom">
-                            <div className="cardCustom_side">
-                            <img src={car} className="responsive" alt=""/>
-                            <div className="car_details">
-                                <span className="car_details-make">lamborghini</span>
-                                <span className="car_details-price">$30000</span>
-                                <span className="car_details-model">Gerardo</span>
-                            </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="#" className="btn btn-info offset-by-five columns">view more</a>
-            </section>
+  <div class="wrapper">
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="card_pic" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="card_pic" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="card_pic" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="three columns">
+      <a href={`description/${1}`} class="cardCustom">
+        <div class="cardCustom_side">
+          <img src={car} class="card_pic" alt=""/>
+          <div class="car_details">
+            <span class="car_details-make">lamborghini <span class="car_details-price">$30000</span></span>
+            <span class="car_details-model">Gerardo</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <a href="#" class="btn btn-info offset-by-five columns">view more</a>
+</section>
             <Footer />
         </React.Fragment>
     )

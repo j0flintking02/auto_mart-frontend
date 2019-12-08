@@ -1,19 +1,26 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const path = require('path');
+ const path = require('path');
+ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: './public/index.html',
-  filename: './index.html',
-});
-
-module.exports = {
-  entry: './src/index.js',
-  output: {
+ module.exports = {
+   entry: {
+     app: './src/index.js',
+   },
+   plugins: [
+     // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
+     new CleanWebpackPlugin(),
+     new HtmlWebpackPlugin({
+       title: 'autoMart',
+       template: './public/index.html',
+       filename: './index.html',
+     }),
+   ],
+   output: {
     path: path.resolve('build'),
     filename: 'index.js',
     publicPath: '/',
-  },
-  module: {
+   },
+   module: {
     rules: [
       {
         test: /\.js$/,
@@ -43,5 +50,4 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
   },
-  plugins: [htmlPlugin],
-};
+ };

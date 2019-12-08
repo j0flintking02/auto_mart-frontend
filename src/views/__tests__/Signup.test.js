@@ -14,23 +14,33 @@ let wrapper;
 
 describe('signup Component', () => {
     const submitHandler = jest.fn();
-    const createSpy = toSpy => jest.spyOn(wrapper.instance(), toSpy);
+    // const createSpy = toSpy => jest.spyOn(wrapper.instance(), toSpy);
 
     Object.defineProperty(window.location, 'reload', {
       configurable: true,
     });
 
-    window.location.reload = jest.fn();
+    // window.location.reload = jest.fn();
     const nextProps = { data: {} };
 
     const props = {
       user:{ data: {} },
+      createUser: jest.fn,
       history: { push: jest.fn() },
     };
+
     beforeEach(() => {
+
       wrapper = mount(
-        <SignupTest createUser={jest.fn} user={{ fName: '', lName: '', email:'', address:'', password:'' }} />,
+        <SignupTest {...props} />,
       );
+    });
+    const getEvent = (name = '', value = '') => ({
+      preventDefault: jest.fn(),
+      target: {
+        name,
+        value,
+      },
     });
 
     it('should render signup component', () => {
@@ -38,14 +48,12 @@ describe('signup Component', () => {
     });
 
     it.only('should simulate a click', () => {
-      wrapper.setState({
-        fName: 'John', lName: 'Doe', email:'johndoe@gmail.com', address:'Kampala', password:'Root1234'
-      });
-      wrapper.find('.btn').simulate('submit');
-      console.log(wrapper.find('.btn').simulate('submit').debug());
-
-    //   console.log('>>>>', wrapper.find('.btn').first())
-    //   expect(submitHandler).toBeCalledTimes(1);
+      wrapper.setProps(props);
+      console.log(wrapper.props());
+      
+    expect(wrapper.find('.btn')).toHaveLength(1);
+    wrapper.find('form').simulate('submit', getEvent())
+    expect(submitHandler).toBeCalledTimes(1);
     });
 
     it.skip('should call handleChange on form fill', () => {

@@ -22,6 +22,8 @@ class Signup extends React.Component{
       }
     submitHandler(event) {
         event.preventDefault();
+        console.log('here');
+        
         const { user } = this.props;
         const data = {
             first_name: this.state.fName,
@@ -33,12 +35,11 @@ class Signup extends React.Component{
         this.props.createUser(data);
       }
     componentDidUpdate(prevProps) {
-        // Typical usage (don't forget to compare props):
         if (this.props.user.data !== prevProps.user.data) {
             const { data } = this.props.user
             if(data.status === 201){
                 setTimeout(() => {
-                    this.props.history.push('/login');
+                    // this.props.history.push('/login');
                   }, 3000);
                 }
             }
